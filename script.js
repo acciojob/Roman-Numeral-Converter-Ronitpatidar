@@ -17,9 +17,7 @@ function convertToRoman(num) {
 
 console.log(convertToRoman(14));   // Output: "XIV"
 console.log(convertToRoman(798));  // Output: "DCCXCVIII"
-console.log(convertToRoman(3999)); // Output: "MMMCMXCIX"
-console.log(convertToRoman(44));   // Out
-console.log(convertToRoman(2023));
+
 
 
 
