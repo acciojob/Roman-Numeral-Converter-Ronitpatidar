@@ -9,33 +9,6 @@
 <body>
 	<!-- the entire body must be written by student -->
     <script type="text/javascript" src="./script.js">
-		function convertToRoman(num) {
-  // Symbols and their corresponding values
-  const romanSymbols = [
-    ['M', 1000],
-    ['D', 500],
-    ['C', 100],
-    ['L', 50],
-    ['X', 10],
-    ['V', 5],
-    ['I', 1]
-  ];
-
-  let result = '';
-
-  // Loop through the symbols array
-  for (let i = 0; i < romanSymbols.length; i++) {
-    const [symbol, value] = romanSymbols[i];
-
-    // Determine how many times the Roman symbol fits into num
-    while (num >= value) {
-      result += symbol; // Append the symbol
-      num -= value; // Subtract the value from num
-    }
-  }
-
-  return result;
-}
    </script>
 
 </body>
