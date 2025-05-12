@@ -8,19 +8,28 @@ function convertToRoman(num) {
       5:['V', 5], 
       6:['I', 1]
     };
+let result = '';
 
+  // Loop through the symbols array
+  for (let i = 0; i < romanSymbols.length; i++) {
+    const [symbol, value] = romanSymbols[i];
+
+    // Determine how many times the Roman symbol fits into num
+    while (num >= value) {
+      result += symbol; // Append the symbol
+      num -= value; // Subtract the value from num
+    }
+  }
+
+  return result;
+}
   //your code here
-
 }
 // You can test your code by running the above function and printing it to console by pressing the run button at the top. To run it with input 36, uncomment the following line
 
 
 console.log(convertToRoman(14));   // Output: "XIV"
 console.log(convertToRoman(798));  // Output: "DCCXCVIII"
-
-
-
-
 
 // do not edit below this line
 module.exports = convertToRoman
