@@ -1,35 +1,37 @@
 function convertToRoman(num) {
-  	const obj = {
-      0:['M',1000], 
-      1:['D', 500], 
-      2:['C', 100], 
-      3:['L', 50], 
-      4:['X', 10], 
-      5:['V', 5], 
-      6:['I', 1]
-    };
-let result = '';
+  const romanSymbols = [
+    ['M', 1000],
+    ['CM', 900],
+    ['D', 500],
+    ['CD', 400],
+    ['C', 100],
+    ['XC', 90],
+    ['L', 50],
+    ['XL', 40],
+    ['X', 10],
+    ['IX', 9],
+    ['V', 5],
+    ['IV', 4],
+    ['I', 1]
+  ];
 
-  // Loop through the symbols array
+  let result = '';
+
   for (let i = 0; i < romanSymbols.length; i++) {
     const [symbol, value] = romanSymbols[i];
 
-    // Determine how many times the Roman symbol fits into num
     while (num >= value) {
-      result += symbol; // Append the symbol
-      num -= value; // Subtract the value from num
+      result += symbol;
+      num -= value;
     }
   }
 
   return result;
 }
-  //your code here
-}
-// You can test your code by running the above function and printing it to console by pressing the run button at the top. To run it with input 36, uncomment the following line
 
-
-console.log(convertToRoman(14));   
-console.log(convertToRoman(798));  
+// Test cases
+console.log(convertToRoman(14));   // Output: XIV
+console.log(convertToRoman(798));  // Output: DCCXCVIII
 
 // do not edit below this line
-module.exports = convertToRoman
+module.exports = convertToRoman;
